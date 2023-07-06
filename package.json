@@ -1,6 +1,6 @@
 {
   "name": "create-element-plus-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An easy way to start a Element-plus Vue project",
   "type": "module",
   "bin": {
