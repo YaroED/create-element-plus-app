@@ -1,0 +1,53 @@
+{
+  "name": "create-element-plus-app",
+  "version": "1.0.5",
+  "description": "An easy way to start a Element-plus Vue project",
+  "type": "module",
+  "bin": {
+    "create-vue": "outfile.cjs"
+  },
+  "files": [
+    "outfile.cjs",
+    "template"
+  ],
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "build": "zx ./scripts/build.mjs",
+    "prepublishOnly": "zx ./scripts/prepublish.mjs"
+  },
+  "keywords": [
+    "vue3",
+    "vue",
+    "vue-router",
+    "element-plus",
+    "axios"
+  ],
+  "author": "Yaro <852373851@qq.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/eslint": "^8.21.1",
+    "@types/node": "^18.14.2",
+    "@types/prompts": "^2.4.2",
+    "@vue/create-eslint-config": "^0.2.0",
+    "@vue/tsconfig": "^0.1.3",
+    "esbuild": "^0.16.14",
+    "esbuild-plugin-license": "^1.2.2",
+    "gradient-string": "^2.0.2",
+    "husky": "^8.0.3",
+    "kolorist": "^1.7.0",
+    "lint-staged": "^13.1.2",
+    "minimist": "^1.2.8",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.4",
+    "prompts": "^2.4.2",
+    "zx": "^4.3.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "prettier --write"
+    ]
+  }
+}

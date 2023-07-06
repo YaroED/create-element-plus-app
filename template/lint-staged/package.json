@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "postinstall": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "lint-staged": "13.1.2",
+    "prettier": "2.8.4",
+    "simple-git-hooks": "2.8.1"
+  }
+}

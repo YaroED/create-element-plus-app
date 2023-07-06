@@ -1,0 +1,5 @@
+pnpm-lock.yaml
+**/dist
+node_modules
+CHANGELOG.md
+README.md
