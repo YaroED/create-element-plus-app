@@ -56,6 +56,7 @@ importers:
       unplugin-auto-import: 0.15.1
       unplugin-vue-components: 0.24.1
       vite: 4.1.4
+      vite-code-inspector-plugin: 0.0.21
       vue: 3.3.4
       vue-router: 4.1.6
       vue-tsc: 1.2.0
@@ -81,6 +82,7 @@ importers:
       unplugin-auto-import: 0.15.1
       unplugin-vue-components: 0.24.1_vue@3.3.4
       vite: 4.1.4_@types+node@18.14.2
+      vite-code-inspector-plugin: 0.0.21
       vue-tsc: 1.2.0_typescript@4.8.4
 
 packages:
@@ -971,6 +973,12 @@ packages:
     resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==}
     dev: false
 
+  /async/2.6.4:
+    resolution: {integrity: sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==}
+    dependencies:
+      lodash: 4.17.21
+    dev: true
+
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
@@ -1094,6 +1102,15 @@ packages:
       string-width: 5.1.2
     dev: true
 
+  /code-inspector-core/0.0.21:
+    resolution: {integrity: sha512-Mc9bjSNG8DK91vK/FYttnjQqL3j5t3hEfLFoy0MSADbgkf5f9iumT+yHkooeCMj+AjC5RpzwUfn19eNMwKV2xQ==}
+    dependencies:
+      chalk: 4.1.2
+      portfinder: 1.0.32
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
     dependencies:
@@ -1169,6 +1186,17 @@ packages:
 
   /de-indent/1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
+    dev: true
+
+  /debug/3.2.7:
+    resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
     dev: true
 
   /debug/4.3.4:
@@ -2328,6 +2356,13 @@ packages:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
 
+  /mkdirp/0.5.6:
+    resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.8
+    dev: true
+
   /mlly/1.1.1:
     resolution: {integrity: sha512-Jnlh4W/aI4GySPo6+DyTN17Q75KKbLTyFK8BrGhjNP4rxuUjbRWhE6gHg3bs33URWAF44FRm7gdQA348i3XxRw==}
     dependencies:
@@ -2590,6 +2625,17 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.1.1
       pathe: 1.1.0
+    dev: true
+
+  /portfinder/1.0.32:
+    resolution: {integrity: sha512-on2ZJVVDXRADWE6jnQaX0ioEylzgBpQk8r55NE4wjXW1ZxO+BgDlY6DXwj20i0V8eB4SenDQ00WEaxfiIQPcxg==}
+    engines: {node: '>= 0.12.0'}
+    dependencies:
+      async: 2.6.4
+      debug: 3.2.7
+      mkdirp: 0.5.6
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /postcss-selector-parser/6.0.11:
@@ -3183,6 +3229,14 @@ packages:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-code-inspector-plugin/0.0.21:
+    resolution: {integrity: sha512-/CQQPv0TB4w0O9HqbTp5zzfpKdkGsqZq7Z6HH4qW3W9D7zw/XGZYDjd4/BWuct8Qq2jl3Zb+RrFGYgbiQI0dVg==}
+    dependencies:
+      code-inspector-core: 0.0.21
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /vite/4.1.4_@types+node@18.14.2:

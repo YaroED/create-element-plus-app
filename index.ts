@@ -25,7 +25,7 @@ async function init() {
     boolean: true
   })
   let targetDir = argv._[0] || ''
-  const defaultProjectName = !targetDir ? 'hlp-vue-project' : targetDir
+  const defaultProjectName = !targetDir ? 'vue-project' : targetDir
   const forceOverwrite = argv.force
   let result: {
     projectName?: string
