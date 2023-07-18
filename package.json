@@ -1,6 +1,6 @@
 {
   "name": "create-element-plus-app",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "An easy way to start a Element-plus Vue project",
   "type": "module",
   "bin": {
@@ -26,6 +26,13 @@
     "axios"
   ],
   "author": "Yaro <852373851@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://YaroED/create-element-plus-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YaroED/create-element-plus-app/issues"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/eslint": "^8.21.1",
