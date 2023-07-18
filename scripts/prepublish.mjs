@@ -15,4 +15,5 @@ try {
   if (!e.stdout.includes('nothing to commit')) {
     throw e
   }
+  await $`git tag -d v${version}`
 }
